@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="Porto.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portofolio</title>
+	</head>
+	<body>
+		<div class="div1">	<a href="file:///D:/Materi/HTML/Tugas%201/Portofolio.html">
+			<div class="header">
+				<div class="logo"><img src="Pride.png" height="125px" ></div>
+				<h1 class="judul">Webpage</h1></a>
+				<ul>
+					<li><a href="https://www.instagram.com/reggyarios/">
+							<img src="ig.png" height="25px"> Instagram </a>
+					</li>
+					
+					<li><a href="https://wa.me/6281268555029">
+						<img src="wa.png" height="25	px"> Whatsapp </a>	
+					</li>
+
+					<li><a href="https://discord.gg/user/Lenn#2549/">
+						<img src="dc.png" height="25px"> Discord </a>
+					</li>
+				</ul>
+			</div>
+
+		<div class="content">	
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+				  <img src="CSA.jpg" style="width:100%">
+				  <div class="text">All About Computer Science</div>
+				</div>
+				
+				<div class="mySlides fade">
+				  <img src="First.jpg" style="width:100%">
+				  <div class="text">The day that I Remember</div>
+				</div>
+				
+				<div class="mySlides fade">
+					<img src="PMM.jpg" style="width:100%">
+					<div class="text">Goodbye in Peace</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+				
+				</div>
+				<br>
+				
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+				
+				<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+				
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+				
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}    
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				}
+				</script>
+	</div>
+				
+			<div class="footer">
+				<p>©2022 - Created by me ofc.</p>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
